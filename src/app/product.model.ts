@@ -1,4 +1,6 @@
+
 export class Product{
+
   constructor(
     public sku:string,
     public name:string,
@@ -6,4 +8,5 @@ export class Product{
     public department:string[],
     public price:number
   ){}
+
 }

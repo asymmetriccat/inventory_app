@@ -11,6 +11,10 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { FormSkuComponent } from './form-sku/form-sku.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { PriceServiceComponent } from './price-service/price-service.component';
+import { InjectorDemoComponent } from './injector-demo/injector-demo.component';
+import {UserService} from './injector-demo/user.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import {ReactiveFormsModule} from '@angular/forms';
     ProductImageComponent,
     PriceDisplayComponent,
     ProductDepartmentComponent,
-    FormSkuComponent
+    FormSkuComponent,
+    UserComponent,
+    PriceServiceComponent,
+    InjectorDemoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     HttpModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
